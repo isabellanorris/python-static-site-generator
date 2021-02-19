@@ -4,10 +4,10 @@ import shutil
 
 
 class Parser:
-    extentions: List[str] = []
+    extensions: List[str] = []
 
-    def valid_extension(self, extention):
-        if extention in self.extentions:
+    def valid_extension(self, extension):
+        if extension in self.extensions:
             return True
         else:
             return False
@@ -29,7 +29,7 @@ class Parser:
 
 
 class ResourceParser(Parser):
-    extentions = [".jpeg", ".png", ".gif", ".css", ".html"]
+    extensions = [".jpeg", ".png", ".gif", ".css", ".html"]
 
     def parse(self, path: Path, source: Path, dest: Path):
         self.copy(path, source, dest)
